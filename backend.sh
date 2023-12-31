@@ -52,7 +52,7 @@ if [ ! -d /app]; then
 fi
 
 echo -e "${magenta}>>>> Downloading Application content <<<<${white}"
-curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip
+curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip &>>${log}
 fun_status_check
 
 echo -e "${magenta}>>>> Extracting the Application content <<<<${white}"
@@ -69,7 +69,7 @@ dnf install mysql -y &>>${log}
 fun_status_check
 
 echo -e "${magenta}>>>> Load schema <<<<${white}"
-mysql -h 172.31.30.30 -uroot -${mysql_passwd} < /app/schema/backend.sql  &>>${log}
+mysql -h 54.163.62.54 -uroot -p${mysql_passwd} < /app/schema/backend.sql  &>>${log}
 fun_status_check
 
 echo -e "${magenta}>>>> Starting the backend service <<<<${white}"
