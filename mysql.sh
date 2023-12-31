@@ -5,7 +5,7 @@ white="\e[0m"
 green="\e[32m"
 mysql_passwd=$1
 
-if [ -z mysql_passwd ]; then
+if [ -z ${mysql_passwd} ]; then
   echo -e "${red}Password Missing ${white}"
   exit 2
 fi
