@@ -45,7 +45,7 @@ echo -e "${magenta}>>>> Removing old content <<<<${white}"
 rm -rf /app &>>${log}
 fun_status_check
 
-if [ ! -d /app]; then
+if [ ! -d /app ]; then
   echo -e "${magenta}>>>> Creating Expense app directory <<<<${white}"
   mkdir /app &>>${log}
   fun_status_check
