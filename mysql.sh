@@ -3,7 +3,13 @@ magenta="\e[35m"
 red="\e[31m"
 white="\e[0m"
 green="\e[32m"
-passwd=$1
+mysql_passwd=$1
+
+if [ -z mysql_passwd ]; then
+  echo -e "${red}Password Missing ${white}"
+  exit 2
+fi
+
 fun_status_check() {
   if [ $? -ne 0 ]; then
     echo -e "${red} Failed ${white}"
