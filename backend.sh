@@ -69,7 +69,7 @@ dnf install mysql -y &>>${log}
 fun_status_check
 
 echo -e "${magenta}>>>> Load schema <<<<${white}"
-mysql -h 54.163.62.54 -uroot -p${mysql_passwd} < /app/schema/backend.sql  &>>${log}
+mysql -h mysql-dev.devrohiops.online -uroot -p${mysql_passwd} < /app/schema/backend.sql  &>>${log}
 fun_status_check
 
 echo -e "${magenta}>>>> Starting the backend service <<<<${white}"
