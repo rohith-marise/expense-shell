@@ -47,7 +47,7 @@ func_start_service() {
 }
 func_mysql() {
   func_passwd_auth
-  if [ ${component} == "backend" ]; then
+  if [ ${component} == "mysql" ]; then
     package=mysql
     func_disabling_module
   fi
