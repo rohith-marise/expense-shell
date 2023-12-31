@@ -37,5 +37,5 @@ systemctl start mysqld &>>${log}
 fun_status_check
 
 echo -e "${magenta}>>>> User & Password Setup <<<<${white}"
-mysql_secure_installation --set-root-pass ${passwd} &>>${log}
+mysql_secure_installation --set-root-pass ${mysql_passwd} &>>${log}
 fun_status_check
